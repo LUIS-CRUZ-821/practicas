@@ -1,0 +1,297 @@
+/* --- Variables (paleta alineada con #006699 del proyecto) --- */
+:root {
+    --color-primario: #006699;
+    --color-primario-claro: #0a8bb8;
+    --color-primario-oscuro: #004d66;
+    --color-fondo: #e8f2f6;
+    --color-superficie: #ffffff;
+    --color-texto: #1a2b33;
+    --color-texto-suave: #4a6670;
+    --color-borde: #b8d4e0;
+    --color-th: #c5d8f5;
+    --sombra-suave: 0 8px 28px rgba(0, 102, 153, 0.12);
+    --radio: 10px;
+    --radio-chico: 6px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-texto);
+    background: linear-gradient(165deg, var(--color-fondo) 0%, #d4e8ef 45%, #cfe0ea 100%);
+    background-attachment: fixed;
+}
+
+/* --- Cabecera y pie --- */
+header {
+    padding: 1.25rem 1rem 0.5rem;
+    text-align: center;
+}
+
+header img {
+    max-width: min(550px, 100%);
+    height: auto;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-suave);
+}
+
+header h2 {
+    margin: 0 0 0.25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--color-primario-oscuro);
+}
+
+header h4 {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-texto-suave);
+}
+
+footer {
+    padding: 2rem 1rem 1.5rem;
+    margin-top: auto;
+}
+
+footer h6 {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-texto-suave);
+}
+
+/* --- Contenido principal --- */
+section {
+    max-width: min(820px, calc(100% - 2rem));
+    margin: 0 auto 2rem;
+    padding: 1.5rem 1.25rem 2rem;
+    background: var(--color-superficie);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-suave);
+    border: 1px solid rgba(0, 102, 153, 0.08);
+}
+
+/* Centrado (varios elementos reutilizan #centrado en el HTML) */
+#centrado {
+    text-align: center;
+}
+
+/* --- Tablas --- */
+table {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--color-superficie);
+    border-radius: var(--radio-chico);
+    overflow: hidden;
+    border: 1px solid var(--color-borde);
+}
+
+table th {
+    padding: 0.65rem 0.5rem;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-primario-oscuro);
+    background: linear-gradient(180deg, var(--color-th) 0%, #b0c9ef 100%);
+    border-bottom: 2px solid var(--color-primario);
+}
+
+td {
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--color-borde);
+    vertical-align: middle;
+}
+
+tbody tr:nth-child(even) td {
+    background: rgba(0, 102, 153, 0.03);
+}
+
+tbody tr:hover td {
+    background: rgba(0, 102, 153, 0.07);
+    transition: background 0.15s ease;
+}
+
+/* Primera fila con icono carrito (canasta) */
+table tr:first-child td {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(180deg, #f0f7fa 0%, var(--color-superficie) 100%);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+table tr:first-child img {
+    margin: 0 auto;
+    display: block;
+    border-radius: var(--radio-chico);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Imagen del producto en el formulario (index): columna con espacio real */
+form table td[rowspan="3"] {
+    min-width: 200px;
+    width: 220px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+form img.vista-producto {
+    width: 200px;
+    height: 200px;
+    max-width: none;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: var(--radio-chico);
+    background: #f4fafc;
+    box-shadow: 0 2px 12px rgba(0, 102, 153, 0.12);
+}
+
+/* --- Formulario (index) --- */
+form table td:first-child:not([rowspan]) {
+    font-weight: 600;
+    color: var(--color-primario-oscuro);
+    white-space: nowrap;
+}
+
+select[name="selProducto"] {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.5rem 2rem 0.5rem 0.65rem;
+    font-size: 0.95rem;
+    color: var(--color-texto);
+    background-color: #f8fbfc;
+    border: 1px solid var(--color-borde);
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+select[name="selProducto"]:hover,
+select[name="selProducto"]:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(0, 102, 153, 0.15);
+}
+
+input[type="text"][name="txtCantidad"] {
+    width: 100%;
+    max-width: 120px;
+    padding: 0.5rem 0.65rem;
+    font-size: 1rem;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-chico);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"][name="txtCantidad"]:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(0, 102, 153, 0.15);
+}
+
+input[type="submit"][name="btnComprar"] {
+    margin-top: 0.25rem;
+    padding: 0.55rem 1.35rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(180deg, var(--color-primario-claro) 0%, var(--color-primario) 100%);
+    border: none;
+    border-radius: var(--radio-chico);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 102, 153, 0.35);
+    transition: transform 0.12s ease, box-shadow 0.2s;
+}
+
+input[type="submit"][name="btnComprar"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(0, 102, 153, 0.4);
+}
+
+input[type="submit"][name="btnComprar"]:active {
+    transform: translateY(0);
+}
+
+/* --- Celdas de totales (canasta) --- */
+#resaltado {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-primario-oscuro);
+    background: rgba(0, 102, 153, 0.08) !important;
+}
+
+#derecha {
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-align: right;
+    color: var(--color-texto);
+}
+
+#totales {
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-align: right;
+    color: var(--color-primario-oscuro);
+    background: rgba(0, 102, 153, 0.06) !important;
+}
+
+/* Enlaces solo en filas de acción (canasta: td colspan="5") */
+td[colspan="5"] {
+    text-align: center;
+    padding: 0.85rem;
+    background: #f4fafc;
+}
+
+td[colspan="5"] a {
+    display: inline-block;
+    margin: 0.15rem 0.35rem;
+    padding: 0.45rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--radio-chico);
+    transition: background 0.2s, color 0.2s;
+}
+
+td[colspan="5"] a[href="index.php"] {
+    color: var(--color-primario);
+    background: rgba(0, 102, 153, 0.1);
+    border: 1px solid var(--color-borde);
+}
+
+td[colspan="5"] a[href="index.php"]:hover {
+    background: rgba(0, 102, 153, 0.18);
+}
+
+td[colspan="5"] a[href="destruir.php"] {
+    color: #fff;
+    background: linear-gradient(180deg, #c75c5c 0%, #a94442 100%);
+    border: 1px solid #8b3a38;
+}
+
+td[colspan="5"] a[href="destruir.php"]:hover {
+    filter: brightness(1.05);
+}

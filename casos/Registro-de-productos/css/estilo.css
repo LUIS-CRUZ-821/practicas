@@ -1,0 +1,123 @@
+body {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #243038;
+    background: linear-gradient(180deg, #e8f0f5 0%, #f5f8fa 45%, #fafcfd 100%);
+    min-height: 100vh;
+    margin: 0;
+}
+
+#centrado {
+    text-align: center;
+}
+
+header,
+section,
+footer {
+    padding: 0 1rem;
+}
+
+header {
+    padding-top: 1rem;
+}
+
+h2#centrado {
+    margin: 0 0 0.5rem;
+    color: #0d3d52;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+}
+
+h4#centrado {
+    margin: 1rem 0 0.75rem;
+    color: #2a5566;
+    font-weight: 600;
+}
+
+h6#centrado {
+    margin: 2rem 0 1rem;
+    color: #5a6a72;
+    font-weight: normal;
+}
+
+table {
+    margin: 1rem auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(13, 61, 82, 0.1);
+}
+
+img {
+    margin: 0.75rem auto;
+    display: block;
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+th,
+td {
+    border: 1px solid #9bc4d6;
+    padding: 10px 14px;
+}
+
+table th {
+    background: linear-gradient(180deg, #d8e4ff 0%, #b9c9fe 100%);
+    color: #1a3550;
+}
+
+a {
+    color: #156a8a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input[type="text"] {
+    padding: 7px 11px;
+    border: 1px solid #a8c0d0;
+    border-radius: 5px;
+    font: inherit;
+    min-width: 8em;
+    background: #fafcfe;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #2a7a9a;
+    box-shadow: 0 0 0 2px rgba(42, 122, 154, 0.2);
+}
+
+input[type="submit"] {
+    padding: 8px 16px;
+    margin: 3px 2px;
+    border: 1px solid #1e6f8c;
+    border-radius: 6px;
+    background: linear-gradient(180deg, #3d9bc0 0%, #2a7a9a 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+}
+
+input[type="submit"]:hover {
+    filter: brightness(1.06);
+}
+
+#resaltado {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 22px;
+}
+
+#derecha {
+    text-align: right;
+}
+
+#totales {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 22px;
+    text-align: right;
+}

@@ -1,0 +1,133 @@
+:root {
+  --color-fondo: #f0f7f4;
+  --color-fondo-overlay: rgba(255, 255, 255, 0.88);
+  --color-primario: #2f6f5e;
+  --color-primario-medio: #256356;
+  --color-primario-claro: #4a9d87;
+  --color-accento-suave: #f5e6b3;
+  --color-texto: #1e2d2a;
+  --color-texto-suave: #4a5c57;
+  --color-borde: rgba(47, 111, 94, 0.25);
+  --color-tarjeta: #fff;
+  --rgb-sombra: 30, 45, 42;
+  --sombra-suave: 0 8px 32px rgba(var(--rgb-sombra), 0.08);
+  --sombra-media: 0 12px 40px rgba(var(--rgb-sombra), 0.12);
+  --sombra-foto: 0 4px 20px rgba(var(--rgb-sombra), 0.12);
+  --sombra-boton: 0 4px 14px rgba(47, 111, 94, 0.35);
+  --radio: 12px;
+  --radio-chico: 8px;
+  --font-ui: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font: 15px/1.55 var(--font-ui);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  background-image:
+    linear-gradient(
+      165deg,
+      var(--color-fondo-overlay) 0%,
+      rgba(240, 247, 244, 0.92) 45%,
+      rgba(255, 255, 255, 0.85) 100%
+    ),
+    url(fondo.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header{
+  text-align: center;
+}
+header #centrado {
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+#titulo {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2.15rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tabla-voto,
+.tabla-resumen {
+  width: 100%;
+  max-width: 640px;
+  margin-inline: auto;
+  border-collapse: separate;
+}
+
+.tabla-voto td {
+  text-align: center;
+}
+
+footer {
+  margin-top: auto;
+  padding: 1.5rem 1rem 2rem;
+  text-align: center;
+}
+
+footer #centrado {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-texto-suave);
+  letter-spacing: 0.02em;
+}
+
+.candidata-foto {
+  display: block;
+  width: 240px;
+  max-width: 100%;
+  height: 240px;
+  margin-inline: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radio-chico);
+  box-shadow: var(--sombra-foto);
+  outline: 3px solid rgba(255, 255, 255, 0.9);
+  outline-offset: -3px;
+}
+
+.tabla-voto input[type="submit"] {
+  margin: 0.65rem 0 0.5rem;
+  padding: 0.55rem 1.75rem;
+  border: 0;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(180deg, var(--color-primario-claro), var(--color-primario));
+  box-shadow: var(--sombra-boton);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.tabla-voto input[type="submit"]:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 6px 20px rgba(47, 111, 94, 0.4);
+  transform: translateY(-1px);
+}
+
+.tabla-voto input[type="submit"]:active {
+  transform: none;
+  box-shadow: var(--sombra-boton);
+}

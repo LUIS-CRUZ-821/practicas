@@ -1,0 +1,215 @@
+/* Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a2332;
+    background: #eef2f7;
+    line-height: 1.45;
+}
+
+a {
+    color: #1e5a8a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.centrado {
+    text-align: center;
+}
+
+/* Login */
+body.pagina-login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.contenedor-login {
+    width: 100%;
+    max-width: 640px;
+}
+
+.mensaje-error {
+    margin: 0 0 1rem;
+    padding: 0.65rem 1rem;
+    border-radius: 6px;
+    background: #fde8e8;
+    color: #8a1c1c;
+    border: 1px solid #f0b4b4;
+    text-align: center;
+}
+
+.tabla-login {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    border: 3px solid #2c5282;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(30, 58, 95, 0.12);
+}
+
+.tabla-login td {
+    border: 1px solid #c5d4e8;
+    vertical-align: middle;
+}
+
+#titulo {
+    margin: 0;
+    padding: 0.75rem 0.5rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+    background: linear-gradient(135deg, #2b6cb0, #2c5282);
+    text-align: center;
+}
+
+#derecha {
+    font-weight: 600;
+    text-align: right;
+    background: #edf2f7;
+    color: #2d3748;
+}
+
+.tabla-login input[type="text"],
+.tabla-login input[type="password"] {
+    width: 100%;
+    max-width: 220px;
+    padding: 0.45rem 0.55rem;
+    border: 1px solid #a0aec0;
+    border-radius: 4px;
+}
+
+.tabla-login input[type="text"]:focus,
+.tabla-login input[type="password"]:focus {
+    outline: 2px solid #4299e1;
+    outline-offset: 1px;
+    border-color: #4299e1;
+}
+
+.recordar {
+    font-size: 0.9rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+#boton {
+    padding: 0.5rem 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #fff;
+    background: linear-gradient(135deg, #38a169, #276749);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(39, 103, 73, 0.35);
+}
+
+#boton:hover {
+    filter: brightness(1.05);
+}
+
+#boton:active {
+    transform: translateY(1px);
+}
+
+.tabla-login img {
+    display: block;
+    margin: 0.5rem auto;
+}
+
+/* Principal */
+body.pagina-principal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecera-app {
+    background: #fff;
+    border-bottom: 1px solid #cbd5e0;
+    padding: 1rem 1rem 0.5rem;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.titulo-sitio {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    color: #2c5282;
+}
+
+.banner-clientes {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 0.75rem;
+    border-radius: 6px;
+}
+
+.barra-usuario {
+    margin: 0;
+    padding: 0.5rem 0 0.75rem;
+    font-size: 0.95rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.contenido-principal {
+    flex: 1;
+    padding: 1.5rem 1rem;
+}
+
+.tabla-menu {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 550px;
+    border: 1px solid #cbd5e0;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(30, 58, 95, 0.08);
+}
+
+.tabla-menu td {
+    border: 1px solid #e2e8f0;
+    padding: 0.5rem 0.75rem;
+    vertical-align: middle;
+}
+.tabla-menu td:first-child {
+    width: 80px;
+    text-align: center;
+    background: #f7fafc;
+}
+.tabla-menu img {
+    display: block;
+    margin: 0 auto;
+}
+footer {
+    background: #fff;
+    border-top: 1px solid #cbd5e0;
+    padding: 1rem 1rem 1.25rem;
+}
+.pie-enlaces {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+}
+.pie-copy {
+    margin: 0;
+    font-weight: 400;
+    color: #4a5568;
+    font-size: 0.8rem;
+}

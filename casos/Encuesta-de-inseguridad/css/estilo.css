@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: #1a2332;
+    background: linear-gradient(160deg, #e8eef5 0%, #dce6f0 45%, #cfd9e8 100%);
+}
+header {
+    text-align: center;
+    padding: 1rem 1rem 0.5rem;
+}
+header img {
+    display: block;
+    max-width: min(100%, 750px);
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(15, 35, 65, 0.12);
+}
+header h3 {
+    margin: 1rem 0 0.5rem;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #0d3b66;
+    letter-spacing: 0.02em;
+}
+#centrado {
+    text-align: center;
+    margin: 0.75rem auto;
+    max-width: 42rem;
+    padding: 0 1rem;
+    color: #243b53;
+    font-weight: 500;
+}
+section {
+    max-width: 760px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem 1.5rem;
+}
+section form {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.25rem 1rem 1.5rem;
+    box-shadow: 0 4px 20px rgba(15, 35, 65, 0.08),
+        0 1px 3px rgba(15, 35, 65, 0.06);
+}
+table {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 0 rgba(13, 59, 102, 0.06);
+}
+table[border="1"] {
+    border: none;
+}
+th {
+    background: linear-gradient(180deg, #0d3b66 0%, #0a2f52 100%);
+    color: #f8fafc;
+    font-weight: 600;
+    padding: 1rem 1.1rem;
+    text-align: left;
+    font-size: 0.95rem;
+    border: none;
+}
+td {
+    padding: 0.85rem 1rem;
+    vertical-align: top;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+}
+tr:nth-child(even) td {
+    background: #f8fafc;
+}
+tr:last-child td {
+    background: #f1f5f9;
+    border-top: 2px solid #cbd5e1;
+}
+td:first-child:not(:empty) {
+    font-weight: 500;
+    color: #334155;
+    width: 38%;
+}
+td input[type="text"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.55rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #fff;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+td input[type="text"]:focus {
+    outline: none;
+    border-color: #0d3b66;
+    box-shadow: 0 0 0 3px rgba(13, 59, 102, 0.15);
+}
+td input[type="radio"] {
+    margin: 0 0.5rem 0 0;
+    accent-color: #0d3b66;
+    vertical-align: middle;
+}
+td br + input[type="radio"],
+td input[type="radio"] + br {
+    line-height: 1.8;
+}
+td input[type="submit"] {
+    margin: 0.25rem 0.35rem 0.25rem 0;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.08s, box-shadow 0.15s, background 0.15s;
+}
+td input[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(13, 59, 102, 0.2);
+}
+td input[type="submit"]:active {
+    transform: translateY(0);
+}
+td input[type="submit"][value*="Siguiente"],
+td input[type="submit"][value="Encuesta"],
+td input[type="submit"][value*="Volver"] {
+    background: linear-gradient(180deg, #1e5a8e 0%, #0d3b66 100%);
+    color: #fff;
+}
+td input[type="submit"][value*="Anterior"] {
+    background: #fff;
+    color: #0d3b66;
+    border: 2px solid #0d3b66;
+}
+td input[type="submit"][value*="Anterior"]:hover {
+    background: #f0f7ff;
+}
+footer {
+    margin-top: auto;
+    padding: 1.25rem 1rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(13, 59, 102, 0.12);
+    background: rgba(255, 255, 255, 0.65);
+}
+footer h4,
+footer #centrado {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 400;
+}

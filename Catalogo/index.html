@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTP-8">
+    <meta name="viewport" content="whidth=device-width, initial-scale=1.0">
+    <title>Catalogo de productos | ejemplo html5 + css</title>
+    <meta name="descripcion"
+    content="Ejemplo de catalago de productos utilizando html5 y css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brnad" href="#">
+                <span class="brand_logo" aria-hidden="true">CP</span>
+                <span class="brand_text"><strong>Catalogo pro</strong>
+                <small>Ejemplo didactico html + css</small></span>
+            </a>
+        </div>
+
+        <form class="search" action="#"
+        method="get" role="search" aria-label="Buscar productos">
+        <label class="sr-only" for="q">Buscar productos</label>
+        <input type="search" name="q" id="q" placeholder="buscar taza, playera, libreta, etc.">
+        <button type="submit"> Buscar </button>
+
+    </form>
+    </header>
+
+    <main class="container layout">
+        <aside class="filters" aria-label="Filtros">
+            <h2>Filtros</h2>
+            <section class="filter-block">
+                <h3>Categoria</h3>
+                <div class="chips">
+                    <button class="chip is active" type="button">Todos</button>
+                    <button class="chip" type="button">Hogar</button>
+                    <button class="chip" type="button">Escolar</button>
+                    <button class="chip" type="button">Tecnologia</button>
+                    <button class="chip" type="button">Regalos</button>
+                </div>
+                <p class="hint">* Este es un ejmplo, los filtros son visuales.
+                    Luego se conectan con JS o back end</p>
+            </section>
+    </main> 
+
+</body>
+</html>
